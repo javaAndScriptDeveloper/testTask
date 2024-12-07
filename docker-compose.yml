@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  main-db:
+    image: bitnami/postgresql:latest
+    container_name: poc-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRESQL_DATABASE: poc
+
+  test-db:
+    image: bitnami/postgresql:latest
+    container_name: poc-test-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRESQL_DATABASE: poc
