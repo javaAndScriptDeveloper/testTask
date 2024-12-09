@@ -30,6 +30,7 @@ dependencies {
     implementation ("org.springframework.boot:spring-boot-starter-cache")
     implementation("org.springframework.cloud:spring-cloud-starter:4.2.0")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.2.0")
+    implementation("com.github.ben-manes.caffeine:caffeine:3.1.8")
     implementation ("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0")
     implementation ("org.mapstruct:mapstruct:1.6.3")
     implementation("org.liquibase:liquibase-core:4.30.0")
@@ -40,8 +41,8 @@ dependencies {
     testCompileOnly ("org.projectlombok:lombok:1.18.36")
     testImplementation ("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.qameta.allure:allure-junit5:2.29.1")
-    testImplementation("org.wiremock:wiremock:3.10.0")
     testImplementation("org.assertj:assertj-core:3.26.3")
+    testImplementation("org.jeasy:easy-random-core:5.0.0")
     testImplementation (files("src/test/resources"))
 }
 

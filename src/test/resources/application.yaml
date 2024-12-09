@@ -1,8 +1,22 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/test-example
+    url: jdbc:postgresql://localhost:5433/poc
     username: postgres
     password: password
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.yaml
     drop-first: true
+
+api:
+  path: /api/v1
+  currency-rates:
+    url: localhost:9000
+    api-key: some-api-key
+
+job:
+  update-currency-rates:
+    initial-delay: "3600000"
+    fixed-delay: "3600000"
+
+cache:
+  expiration-time: "3600000"
